@@ -7,6 +7,7 @@ An Express-based API playground application for testing and experimentation.
 From the project root directory:
 
 ```bash
+gws init
 gws up
 ```
 
