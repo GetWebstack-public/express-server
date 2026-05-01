@@ -1,23 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: express-server
-  namespace: express-server
+  name: gws-playground-api
   labels:
-    app: express-server
+    app: gws-playground-api
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: express-server
+      app: gws-playground-api
   template:
     metadata:
       labels:
-        app: express-server
+        app: gws-playground-api
     spec:
       containers:
-      - name: express-server
-        image: express-server
+      - name: gws-playground-api
+        image: gws-playground-api
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 3001

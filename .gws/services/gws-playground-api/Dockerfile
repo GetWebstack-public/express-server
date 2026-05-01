@@ -6,4 +6,4 @@ RUN npm install
 COPY . .
 EXPOSE 3001
 ENV HOST=0.0.0.0
-CMD ["nodemon", "src/index.js"]
+CMD ["nodemon", "app.js"]
