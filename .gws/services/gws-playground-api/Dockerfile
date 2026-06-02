@@ -1,9 +1,9 @@
 FROM node:20-alpine
-WORKDIR /app
-RUN npm install -g nodemon
-COPY package.json ./
+WORKDIR /deps
+COPY package.json package-lock.json ./
 RUN npm install
-COPY . .
+ENV NODE_PATH=/deps/node_modules
+WORKDIR /app
 EXPOSE 3001
 ENV HOST=0.0.0.0
-CMD ["nodemon", "app.js"]
+CMD ["node", "app.js"]

@@ -22,4 +22,9 @@ spec:
         - containerPort: 3001
           name: http
           protocol: TCP
+        env:
+        - name: DATABASE_URL
+          value: "mysql://gws_user:devpassword@mysql:3306/gws_playground_db"
+        - name: ENVIRONMENT
+          value: "development"
       restartPolicy: Always
